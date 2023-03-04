@@ -1,0 +1,39 @@
+.box {
+  max-width: 670px;
+  background: #fff;
+  margin: 40px auto;
+  padding: 60px 26px;
+  border-radius: 10px;
+  border-left: 1px solid #eee;
+  border-top: 1px solid #eee;
+  border-bottom: 3px solid #eee;
+  border-right: 3px solid #eee;
+
+  @include mobile {
+    padding: 40px 10px;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 35px;
+    margin: 20px 0;
+
+    &--red {
+      color: #D32F2F;
+    }
+
+    @include mobile {
+      font-size: 30px;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+}

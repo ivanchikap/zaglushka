@@ -1,0 +1,68 @@
+.btn {
+  display: inline-block;
+  padding: 8px 14px;
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  user-select: none;
+  transition: all .2s linear;
+
+  &::before {
+    margin-right: 10px;
+  }
+
+  &--user {
+    &::before {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 700;
+      content: '\f007';
+    }
+  }
+
+  &--google::before {
+    font-family: "Font Awesome 5 Brands";
+    font-weight: 400;
+    content: '\f1a0';
+  }
+
+  @include mobile {
+    width: 80%;
+  }
+
+  & + & {
+    @include mobile {
+      margin-top: 20px;
+    }
+  }
+
+  &--default {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+
+    &:hover {
+      color: #fff;
+      background-color: #5bc0de;
+      border-color: #46b8da;
+    }
+  }
+
+  &--blue {
+    color: #fff;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+
+    &:hover {
+      color: #333;
+      background-color: #fff;
+      border-color: #ccc;
+    }
+  }
+}
